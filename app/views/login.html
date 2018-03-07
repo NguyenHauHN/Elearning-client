@@ -1,0 +1,103 @@
+<div class="memrise reverse-header-ruled plain">
+  <div id="header" class="header-v2">
+    <div class="header-row row">
+      <a class="header-logo" href="/vi/" title="Trang chủ">
+
+                <span class="header-logo-wrapper">
+                    <div class="header-logo-desktop">
+                      <span class="logo-wrapper">
+               Elearning
+           </span>
+                    </div>
+                </span>
+
+      </a>
+
+      <ul class="header-nav right">
+
+        <li class="header-nav-item plain ">
+          <a ui-sref="home" class="nav-item-btn">
+            <span class="nav-item-btn-text">Khóa học</span>
+          </a>
+        </li>
+
+        <li class="header-nav-item plain is-active">
+          <a ui-sref="login" class="nav-item-btn wider">
+            <span class="nav-item-btn-text">Đăng nhập</span>
+          </a>
+        </li>
+        <li class="header-nav-item header-nav-signup colored purple-bg ">
+          <a ui-sref="register" class="nav-item-btn wider">
+            <span class="nav-item-btn-text">Đăng ký</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="header-fake"></div>
+
+
+  <div id="optional-banner">
+
+  </div>
+
+
+  <div id="page-head" class="page-head " style="border-bottom: none !important;">
+    <div class="inner container clearfix">
+
+    </div>
+  </div>
+
+
+  <div id="content" class="">
+    <div class="container container-main">
+
+
+      <div class="front"></div>
+
+      <div class="row">
+        <div class="col-md-12 one-col">
+          <div class="front-box">
+            <div class="whitebox spaced">
+
+
+              <h2>
+                <i class="ico ico-user"></i>
+                Đăng nhập
+              </h2>
+
+
+              <form action="/login/" id="login" method="post" class="form-full-width">
+                <div class="field ">
+                  <label for="id_username">Tên người dùng hoặc Email:</label>
+                  <input class="inpt-large" name="username" type="text" tabindex="1">
+                </div>
+
+                <div class="field ">
+                  <p class="pull-right">
+                    <a href="/password/reset/">Quên mật khẩu!</a>
+                  </p>
+                  <label for="id_password">
+                    Mật khẩu:
+                  </label>
+                  <input class="inpt-large" name="password" type="password" tabindex="2">
+                </div>
+
+                <br>
+
+                <input type="submit" class="btn-success btn-large" value="Đăng nhập" tabindex="3">
+
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div ng-include="'views/footer.html'">
+
+  </div>
+</div>
