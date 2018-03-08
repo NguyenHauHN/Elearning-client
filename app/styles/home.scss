@@ -1,0 +1,39 @@
+.dashboard {
+  #content{
+    background-color: transparent !important;
+  }
+
+  #page-head{
+    padding: 14px 0 !important;
+  }
+  .card-top{
+    display: flex;
+  }
+  .single-continue-button{
+    min-height: 38px !important;
+    height: auto !important;
+  }
+}
+
+.courses {
+  #content{
+    background-color: transparent !important;
+  }
+  #page-head{
+    padding: 14px 0 !important;
+  }
+}
+.course-box{
+  margin: 10px 0px !important;
+}
+
+
+.levels .container{
+  max-width: 960px !important;
+  padding-left: 0px !important;
+  padding-right: 0px!important;
+}
+
+.levels .levels .level{
+  width: 120px !important;
+}
