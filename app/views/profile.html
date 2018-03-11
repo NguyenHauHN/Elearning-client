@@ -1,0 +1,90 @@
+<div class="settings">
+  <div ng-include="'views/header-loggedin.html'"></div>
+  <div class="header-fake"></div>
+  <div id="page-head" class="">
+    <div class="inner">
+
+
+      <ul class="nav nav-pills chromeless">
+        <li class="active">
+          <a ui-sref="profile" class="tab">
+            <i class="ico ico-user"></i>
+            Hồ sơ
+          </a>
+        </li>
+        <li class="">
+          <a ui-sref="changePassword">
+            <i class="ico ico-lock"></i>
+            Mật khẩu
+          </a>
+        </li>
+      </ul>
+
+      <h1>
+        Cài đặt
+      </h1>
+
+
+    </div>
+  </div>
+  <div id="content" class="">
+    <div class="container container-main">
+
+
+      <form action="/settings/" method="post" enctype="multipart/form-data" class="form-full-width">
+        <input type="hidden" name="csrfmiddlewaretoken"
+               value="g0A7r21omDsuLyTG3MUDqJ2vgFqzPtIHegtxBLFOAmy8zCOR6g1UJT9KuxgXBzCG">
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="inner sidebar">
+
+              <div data-role="photo-upload-trigger" class="photo-upload-trigger thumbnail thumbnail-block whitebox">
+                <img
+                  src="images/user.jpg"
+                  alt="">
+              </div>
+
+
+              <button class="btn btn-block btn-icos-active" data-role="photo-upload-trigger">
+                <span class="ico ico-top"></span>
+                Tải ảnh mới
+              </button>
+
+              <br>
+
+              <div class="field photo-upload">
+                <input type="file" name="photo" id="id_photo">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+
+            <div class="field field-inline">
+              <label>Tên đăng nhập</label>
+              <input type="text" name="username" value="hậu_nguyễn176" required="" id="id_username">
+
+            </div>
+
+            <div class="field field-inline">
+              <label>Email</label>
+              <input type="email" name="email" value="nguyenhau1996mta@gmail.com" required="" id="id_email">
+
+            </div>
+            <div class="field field-inline">
+              <button type="submit" class="btn btn-success btn-large">
+                <i class="ico ico-correct ico-white"></i>
+                Lưu
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+  <div ng-include="'views/footer.html'"></div>
+</div>
+

@@ -40,6 +40,24 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     url: "/lesson/{id}",
     templateUrl: "views/lesson.html",
     controller: "LessonController"
+  })
+  .state({
+    name: "profile",
+    url: "/profile",
+    templateUrl: "views/profile.html",
+    controller: "ProfileController"
+  })
+  .state({
+    name: "changePassword",
+    url: "/change-password",
+    templateUrl: "views/change-password.html",
+    controller: "ProfileController"
+  })
+  .state({
+    name: "learnLesson",
+    url: "/lesson/{idLesson}/learn",
+    templateUrl: "views/learn-lesson.html",
+    controller: "LearnLessonController"
   });
 
   $urlRouterProvider.otherwise('/home')
