@@ -11,3 +11,4 @@ var app = angular
     'ngTouch',
     'ui.router'
   ]);
+app.value("Domain", Domain);

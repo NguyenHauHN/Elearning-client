@@ -1,43 +1,52 @@
 .dashboard {
-  #content{
+  #content {
     background-color: transparent !important;
   }
 
-  #page-head{
+  #page-head {
     padding: 14px 0 !important;
   }
-  .card-top{
+  .card-top {
     display: flex;
   }
-  .single-continue-button{
+  .single-continue-button {
     min-height: 38px !important;
     height: auto !important;
   }
 }
 
 .courses {
-  #content{
+  #content {
     background-color: transparent !important;
   }
-  #page-head{
+  #page-head {
     padding: 14px 0 !important;
   }
 }
-.course-box{
+
+.course-box {
   margin: 10px 0px !important;
 }
 
-
-.levels .container{
+.levels .container {
   max-width: 960px !important;
   padding-left: 0px !important;
-  padding-right: 0px!important;
+  padding-right: 0px !important;
 }
 
-.levels .levels .level{
+.levels .levels .level {
   width: 120px !important;
 }
 
-.garden-box.multiple_choice ol.choices.grid li, .garden-box.video-pre-presentation ol.choices.grid li{
+.garden-box.multiple_choice ol.choices.grid li, .garden-box.video-pre-presentation ol.choices.grid li {
   width: 45% !important;
+}
+
+.text-red {
+  color: red;
+  text-align: center;
+}
+.text-green{
+  color: green;
+  text-align: center;
 }

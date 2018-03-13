@@ -67,34 +67,40 @@
 
               <h2>
                 <i class="ico ico-user"></i>
-                Đăng nhập
+                Đăng ký
               </h2>
 
 
-              <form class="form-full-width" ng-submit="login()">
+              <form class="form-full-width" ng-submit="register()">
                 <div class="field ">
-                  <label for="id_username">Email:</label>
-                  <input class="inpt-large" name="username" type="email" tabindex="1" ng-model="email" required>
+                  <label for="id_username">Tên đăng nhập:</label>
+                  <input class="inpt-large" name="username" type="text" tabindex="1" ng-model="username" required>
+                </div>
+                <div class="field ">
+                  <label for="id_email">Email:</label>
+                  <input class="inpt-large" name="email" type="email" tabindex="1" ng-model="email" required>
                 </div>
 
                 <div class="field ">
-                  <!--<p class="pull-right">-->
-                    <!--<a href="/password/reset/">Quên mật khẩu!</a>-->
-                  <!--</p>-->
                   <label for="id_password">
                     Mật khẩu:
                   </label>
                   <input class="inpt-large" name="password" type="password" tabindex="2" ng-model="password" required>
                 </div>
 
-                <br>
-                <p class="text-red" ng-if="errorText">{{errorText}}</p>
+                <div class="field ">
+                  <label for="id_re_type_password">
+                    Nhập lại mật khẩu:
+                  </label>
+                  <input class="inpt-large" name="password" type="password" tabindex="2" ng-model="retypePassword" required>
+                </div>
+                <div style="text-align: right;margin-bottom: 10px;"><a ui-sref="login">Đăng nhập?</a></div>
+                <p class="text-green" ng-if="successText && !errorText">{{successText}}</p>
+                <p class="text-red" ng-if="errorText && !successText">{{errorText}}</p>
 
-                <input type="submit" class="btn-success btn-large" value="Đăng nhập" tabindex="3">
+                <input type="submit" class="btn-success btn-large" value="Đăng ký" tabindex="3">
 
               </form>
-
-
             </div>
           </div>
         </div>
