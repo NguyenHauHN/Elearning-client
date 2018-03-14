@@ -11,7 +11,7 @@ app.controller('LoginController', function ($scope, LoginService,$location) {
       function (data) {
         localStorage.setItem("email", data.email);
         localStorage.setItem("iduser", data.iduser);
-        localStorage.setItem("hung", data.name);
+        localStorage.setItem("name", data.name);
         localStorage.setItem("avatar", data.avatar);
         $location.path("home");
       },

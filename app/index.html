@@ -12,7 +12,11 @@
 
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" type="text/css" href="resources/css/bootstrap-three-bb599968b313.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="stylesheet" type="text/css" href="styles/header.css">
+  <link rel="stylesheet" type="text/css" href="styles/home.css">
+  <!-- endbuild -->
+   <link rel="stylesheet" type="text/css" href="resources/css/bootstrap-three-bb599968b313.css">
   <link rel="stylesheet" type="text/css" href="resources/css/web-d255bd56ab13.css">
   <link rel="stylesheet" type="text/css" href="resources/css/icons-82b67b0ed813.css">
   <link rel="stylesheet" type="text/css" href="resources/css/dashboard-68c2f866fc13.css">
@@ -21,11 +25,6 @@
   <link rel="stylesheet" type="text/css" href="resources/css/level-97141becc813.css">
   <link rel="stylesheet" type="text/css" href="resources/css/settings-7e279f328413.css">
   <link rel="stylesheet" type="text/css" href="resources/css/garden-36617f492813.css">
-
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
-  <link rel="stylesheet" type="text/css" href="styles/header.css">
-  <link rel="stylesheet" type="text/css" href="styles/home.css">
-  <!-- endbuild -->
 </head>
 <body ng-app="elearningApp">
 <ui-view></ui-view>
@@ -46,7 +45,6 @@
 <!-- endbower -->
 <!-- endbuild -->
 
-<!-- build:js({.tmp,app}) scripts/scripts.js -->
 <!--resources-->
 <script type="text/javascript">
 
@@ -80,14 +78,11 @@
 </script>
 <script src="resources/js/libs-54820ae4f713.js"></script>
 <script src="resources/js/templates-1912d4e98d13.js"></script>
-<!--<script src="resources/js/memrise-bundle-5e62dae3cd13.js"></script>-->
 <script src="resources/js/main-5d5df7ef7e13.js"></script>
-<!--<script src="resources/js/dashboard-880f4db47813.js"></script>-->
-<!--<script src="resources/js/level-251ea799f313.js"></script>-->
-<!--<script src="resources/js/settings-d611beeea013.js"></script>-->
-
 <script src="config/config.js"></script>
 <script src="config/init.js"></script>
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 
 <!--controllers-->
@@ -100,11 +95,14 @@
 <script src="scripts/controllers/learn-leson-controller.js"></script>
 <script src="scripts/controllers/learn-leson-controller.js"></script>
 <script src="scripts/controllers/register-controller.js"></script>
+<script src="scripts/controllers/header-controller.js"></script>
 
 <!--services-->
 <script src="scripts/services/login-service.js"></script>
 <script src="scripts/services/register-service.js"></script>
 <script src="scripts/services/home-service.js"></script>
+<script src="scripts/services/course-service.js"></script>
+<script src="scripts/services/lesson-service.js"></script>
 <!-- endbuild -->
 </body>
 </html>

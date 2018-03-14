@@ -31,10 +31,7 @@
     <div class="container container-main">
 
 
-      <form action="/settings/" method="post" enctype="multipart/form-data" class="form-full-width">
-        <input type="hidden" name="csrfmiddlewaretoken"
-               value="g0A7r21omDsuLyTG3MUDqJ2vgFqzPtIHegtxBLFOAmy8zCOR6g1UJT9KuxgXBzCG">
-
+      <form class="form-full-width" ng-submit="updateProfile()">
         <div class="row">
           <div class="col-md-3">
             <div class="inner sidebar">
@@ -62,13 +59,13 @@
 
             <div class="field field-inline">
               <label>Tên đăng nhập</label>
-              <input type="text" name="username" value="hậu_nguyễn176" required="" id="id_username">
+              <input type="text" name="username" value="hậu_nguyễn176" required="" ng-model="userInfo.name">
 
             </div>
 
             <div class="field field-inline">
               <label>Email</label>
-              <input type="email" name="email" value="nguyenhau1996mta@gmail.com" required="" id="id_email">
+              <input type="email" name="email" value="nguyenhau1996mta@gmail.com" readonly  ng-model="userInfo.email">
 
             </div>
             <div class="field field-inline">

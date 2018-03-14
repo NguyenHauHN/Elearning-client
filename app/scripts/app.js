@@ -69,8 +69,8 @@ app.config(function ($stateProvider, $urlRouterProvider, $resourceProvider) {
   $urlRouterProvider.otherwise('/home')
 })
   .run(['$http', '$rootScope','$location', '$state' , function ($http, $rootScope, $location, $state) {
-    $rootScope.$on('$locationChangeSuccess', function (event) {
-      if (!localStorage.getItem("iduser")) {
+    $rootScope.$on('$locationChangeSuccess', function (event, newState, oldState) {
+      if (newState.indexOf("home") > -1 && !localStorage.getItem("iduser")) {
         $state.transitionTo('login');
       }
     });

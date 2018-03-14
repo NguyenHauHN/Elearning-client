@@ -1,8 +1,6 @@
 <div class="reverse-header-ruled level-view lesson">
   <div ng-include="'views/header-loggedin.html'"></div>
   <div class="header-fake"></div>
-
-
   <div id="page-head" class="">
     <div class="inner">
 
@@ -38,7 +36,7 @@
             <a href="/course/1658818/tieng-han-1/" class="tab">
               <i class="ico ico-list"></i>
 
-              Độ khó (15)
+              Số từ ({{lesson.lesson.words.length}})
 
             </a>
           </li>
@@ -58,7 +56,7 @@
 
       <a href="/course/1658818/tieng-han-1/2/?action=next" class="level-nav level-nav-next" accesskey="c" title=""
          data-placement="top" data-original-title="Cấp độ tiếp theo [Phím tắt: C]">
-        <span class="level-name">Cấp độ 2</span>
+        <span class="level-name">Bài 2</span>
         <i class="ico ico-left ico-arr-right"></i>
       </a>
 
@@ -72,7 +70,7 @@
           <div class="level-icon">
             <strong class="level-number">
 
-              Cấp độ 1
+              Bài 1
 
 
             </strong>
@@ -88,7 +86,7 @@
 
 
             <h3 class="progress-box-title">
-              Bệ Phóng!
+              {{lesson.lesson.name}}
             </h3>
 
 
@@ -112,20 +110,10 @@
               Học những từ này
 
             </a>
-
-
           </div>
-
-
           <div class="clear"></div>
         </div>
-
-
-        <h4>
-          11
-
-          từ
-        </h4>
+        <!--<h4>{{lesson.lesson.words.length }} từ</h4>-->
 
 
         <div class="things clearfix" data-column-a="1" data-column-b="2">
@@ -133,116 +121,17 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <i class="ico ico-water ico-blue"></i> Ôn tập
           </div>
-          <div class="thing text-text" data-thing-id="1000535433">
+          <div class="thing text-text" ng-repeat="word in lesson.lesson.words track by $index">
             <div class="thinguser"><i class="ico ico-seed ico-purple"></i></div>
             <div class="ignore-ui pull-right"></div>
             <div class="col_a col text">
-              <div class="text">annyeong</div>
+              <div class="text">{{word.enWord}}</div>
             </div>
             <div class="col_b col text">
-              <div class="text">xin chào</div>
+              <div class="text">{{word.enMeaning}}</div>
             </div>
           </div>
-          <div class="thing text-text" data-thing-id="1000535434">
-            <div class="thinguser"><i class="ico ico-seed ico-purple"></i></div>
-            <div class="ignore-ui pull-right"></div>
-            <div class="col_a col text">
-              <div class="text">ye</div>
-            </div>
-            <div class="col_b col text">
-              <div class="text">vâng</div>
-            </div>
-          </div>
-          <div class="thing text-text" data-thing-id="1000535435">
-            <div class="thinguser"><i class="ico ico-seed ico-purple"></i></div>
-            <div class="ignore-ui pull-right"></div>
-            <div class="col_a col text">
-              <div class="text">aniyo</div>
-            </div>
-            <div class="col_b col text">
-              <div class="text">không</div>
-            </div>
-          </div>
-          <div class="thing text-text" data-thing-id="1000535436">
-            <div class="thinguser"><i class="ico ico-seed ico-purple"></i></div>
-            <div class="ignore-ui pull-right"></div>
-            <div class="col_a col text">
-              <div class="text">haeyo</div>
-            </div>
-            <div class="col_b col text">
-              <div class="text">làm</div>
-            </div>
-          </div>
-          <div class="thing text-text" data-thing-id="1000535437">
-            <div class="thinguser"><i class="ico ico-seed ico-purple"></i></div>
-            <div class="ignore-ui pull-right"></div>
-            <div class="col_a col text">
-              <div class="text">hwanyeong haeyo</div>
-            </div>
-            <div class="col_b col text">
-              <div class="text">chào mừng</div>
-            </div>
-          </div>
-          <div class="thing text-text" data-thing-id="1000535438">
-            <div class="thinguser"><i class="ico ico-seed ico-purple"></i></div>
-            <div class="ignore-ui pull-right"></div>
-            <div class="col_a col text">
-              <div class="text">butak habnida</div>
-            </div>
-            <div class="col_b col text">
-              <div class="text">xin</div>
-            </div>
-          </div>
-          <div class="thing text-text" data-thing-id="1000535439">
-            <div class="thinguser"><i class="ico ico-seed ico-purple"></i></div>
-            <div class="ignore-ui pull-right"></div>
-            <div class="col_a col text">
-              <div class="text">mian haeyo</div>
-            </div>
-            <div class="col_b col text">
-              <div class="text">xin lỗi</div>
-            </div>
-          </div>
-          <div class="thing text-text" data-thing-id="1000535440">
-            <div class="thinguser"><i class="ico ico-seed ico-purple"></i></div>
-            <div class="ignore-ui pull-right"></div>
-            <div class="col_a col text">
-              <div class="text">o-ke-i</div>
-            </div>
-            <div class="col_b col text">
-              <div class="text">okê</div>
-            </div>
-          </div>
-          <div class="thing text-text" data-thing-id="1000535441">
-            <div class="thinguser"><i class="ico ico-seed ico-purple"></i></div>
-            <div class="ignore-ui pull-right"></div>
-            <div class="col_a col text">
-              <div class="text">goma woyo</div>
-            </div>
-            <div class="col_b col text">
-              <div class="text">cảm ơn</div>
-            </div>
-          </div>
-          <div class="thing text-text" data-thing-id="1000535442">
-            <div class="thinguser"><i class="ico ico-seed ico-purple"></i></div>
-            <div class="ignore-ui pull-right"></div>
-            <div class="col_a col text">
-              <div class="text">gapsida!</div>
-            </div>
-            <div class="col_b col text">
-              <div class="text">cùng đi thôi!</div>
-            </div>
-          </div>
-          <div class="thing text-text" data-thing-id="1000535443">
-            <div class="thinguser"><i class="ico ico-seed ico-purple"></i></div>
-            <div class="ignore-ui pull-right"></div>
-            <div class="col_a col text">
-              <div class="text">hapsida!</div>
-            </div>
-            <div class="col_b col text">
-              <div class="text">cùng làm thôi!</div>
-            </div>
-          </div>
+
           <div class="things-footer things-row clearfix"><a
             class="ignore-save ignore-ui btn pull-right btn-primary btn-large btn-block hide">
             Lưu

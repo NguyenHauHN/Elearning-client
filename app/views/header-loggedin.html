@@ -1,4 +1,4 @@
-<div id="header" class="header-v2">
+<div id="header" class="header-v2" ng-controller="HeaderController">
   <div class="header-row row">
     <a class="header-logo" href="/vi/" title="Trang chủ">
 
@@ -20,13 +20,13 @@
     <ul class="header-nav ">
 
       <li class="header-nav-item plain ">
-        <a href="/home/" class="nav-item-btn">
+        <a ui-sref="home" class="nav-item-btn">
           <span class="nav-item-btn-text">Trang chủ</span>
         </a>
       </li>
 
       <li class="header-nav-item plain is-active">
-        <a href="/vi/courses/" class="nav-item-btn">
+        <a ui-sref="courses" class="nav-item-btn">
           <span class="nav-item-btn-text">Khóa học</span>
         </a>
       </li>
@@ -50,8 +50,8 @@
             <div class="profile-col rank-text">
               <div class="profile-row">
                 <div class="profile-col rank-text">
-                  <h2>Ziggy</h2>
-                  <p class="profile-rank-text text-big">Level 5</p>
+                  <h2>{{nameUser}}</h2>
+
                 </div>
               </div>
               <div class="profile-row profile-progress">
@@ -59,8 +59,7 @@
               </div>
               <div class="profile-row">
                 <div class="profile-col rank-text">
-                  <p class="profile-rank-text text-small">+4000 points to</p>
-                  <p class="profile-rank-text text-big"><strong>Level 6</strong></p>
+
                 </div>
               </div>
             </div>
@@ -70,7 +69,7 @@
               <i class="profile-link-icon link-icon-1"></i>
               <span class="profile-link-text">Hồ sơ</span>
             </a>
-            <a href="/logout/" class="profile-link js-logout sel-logout">
+            <a class="profile-link js-logout sel-logout" ng-click="logout()">
               <i class="profile-link-icon link-icon-3"></i>
               <span class="profile-link-text">Đăng xuất</span>
             </a>

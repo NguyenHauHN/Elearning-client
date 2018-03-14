@@ -17,8 +17,8 @@
 
         <div class="sidebar-box sidebar-profile">
           <div class="profile-header">
-            <h3 class="name">hậu_nguyễn176</h3>
-            <p class="rank">level 5</p>
+            <h3 class="name">{{userInfo.name}}</h3>
+            <!--<p class="rank">level 5</p>-->
             <div class="image-wrapper">
               <img class="profile-image"
                    src="images/user.jpg"
@@ -31,18 +31,18 @@
             <div class="content-stats">
               <div class="left">
                 <p class="placeholder js-placeholder" style="display: none;"></p>
-                <p class="number js-num" style="display: block;">2</p>
+                <p class="number js-num" style="display: block;">{{userInfo.word_learned}}</p>
                 <p class="text">từ học được</p>
               </div>
               <div class="center"></div>
               <div class="right">
                 <p class="placeholder js-placeholder" style="display: none;"></p>
-                <p class="number js-num" style="display: block;">4,000</p>
+                <p class="number js-num" style="display: block;">{{userInfo.scored | number}}</p>
                 <p class="text">điểm</p>
               </div>
             </div>
             <div class="sidebar-main-btn profile-link">
-              <a href="/user/h%E1%BA%ADu_nguy%E1%BB%85n176/" class="simple">Xem hồ sơ</a>
+              <a ui-sref="profile" class="simple">Xem hồ sơ</a>
             </div>
           </div>
         </div>
@@ -57,13 +57,14 @@
               </div>
             </div>
             <div>
-              <div id="course-1870575" class="course-card-container js-course-card-container">
+              <div class="course-card-container js-course-card-container"
+                   ng-repeat="course in ownCourses track by $index">
                 <div class="course-progress-box">
                   <div class="card-top">
                     <div class="card-image-col"><a href="/course/1870575/dfghj/">
                       <div class="img-crop">
                         <img
-                          src="images/course-0.png"
+                          src="{{course.image}}"
                           class="course-photo">
                         <img
                           src="images/DemoFlags-02_copy.png"
@@ -72,25 +73,24 @@
                     <div class="card-main-container">
                       <div class="top-main">
                         <div class="wrapper">
-                          <div class="detail wide"><p title="dfghj" class="title"><a
-                            href="/course/1870575/dfghj/">dfghj</a></p></div>
-                          <div class="pull-right"><a href="/course/1870575/dfghj/leaderboard"><span
-                            class="simple-btn leaderboard-btn"><span class="leaderboard-icon"></span></span></a><span
-                            class="ctrl-btn"><span class="icon"></span><ul class="tooltip"><li><a
-                            href="/course/1870575/dfghj/" class="option-btn"><i class="option-pin"></i>Thông tin khóa học</a></li><li><a
-                            href="#" data-url="/course/1870575/dfghj/" data-title="dfghj"
-                            data-picture="images/course-0.png"
-                            data-description="ghj"
-                            data-caption="Học cùng Memrise là một cách giúp bạn vừa vui chơi, dễ dàng tăng cường trí nhớ!"
-                            class="option-btn"><i class="option-share"></i>Chia sẻ với bạn bè</a></li><li><span
-                            class="option-btn"><i class="option-delete"></i>Bỏ khóa học</span></li></ul></span></div>
+                          <div class="detail wide">
+                            <p title="{{course.name}}" class="title">
+                              <a href="/course/1870575/dfghj/">{{course.name}}</a>
+                            </p>
+                          </div>
+
                           <div class="wrapper">
                             <div class="course-progress">
-                              <div class="right half"><span>Đã học 0 / 0 từ</span></div>
+
                               <div class="progress-bar-container">
-                                <div style="width: 100%" class="progress-bar"></div>
+                                <div ng-style="{'width': getPercentComplete(course.learned,course.total) + '%'}"
+                                     class="progress-bar"></div>
                               </div>
-                              <div class="left half"><span class="course-complete-text">Course Complete!</span></div>
+                              <div class="right half"><span>Đã học {{course.learned}} / {{course.total}} bài học</span>
+                              </div>
+                              <div class="left half"><span class="course-complete-text"
+                                                           ng-if="course.learned == course.total">Course Complete!</span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -99,193 +99,7 @@
                   </div>
                 </div>
               </div>
-              <div id="course-722031" class="course-card-container js-course-card-container">
-                <div class="course-progress-box">
-                  <div class="card-top">
-                    <div class="card-image-col"><a href="/course/722031/400-tu-toefl-tieng-anh/">
-                      <div class="img-crop"><img
-                        src="images/2224242000150908114042.png"
-                        class="course-photo"><img
-                        src="images/en.png" class="category-photo">
-                      </div>
-                    </a></div>
-                    <div class="card-main-container">
-                      <div class="top-main">
-                        <div class="wrapper">
-                          <div class="detail"><p title="400 từ TOEFL - Tiếng Anh" class="title"><a
-                            href="/course/722031/400-tu-toefl-tieng-anh/">400 từ TOEFL - Tiếng Anh</a></p></div>
-                          <div class="pull-right"><span title="Hãy đặt mục tiêu học tập cho mình"
-                                                        class="simple-btn goal-setter-btn inactive">
-                          </span><a
-                            href="/course/722031/400-tu-toefl-tieng-anh/leaderboard"><span
-                            class="simple-btn leaderboard-btn"><span class="leaderboard-icon"></span></span></a><span
-                            class="ctrl-btn"><span class="icon"></span><ul class="tooltip"><li><a
-                            href="/course/722031/400-tu-toefl-tieng-anh/" class="option-btn"><i class="option-pin"></i>Thông tin khóa học</a></li><li><a
-                            href="#" data-url="/course/722031/400-tu-toefl-tieng-anh/"
-                            data-title="400 từ TOEFL - Tiếng Anh"
-                            data-picture="images/2224242000150908114042.png"
-                            data-description="Học ngay 400 từ đã giúp nhiều người thành công trong kỳ thi TOEFL. Memrise khiến bạn khắc sâu từ mới vào tâm trí ngay lập tức, giúp bạn ghi nhớ và sử dụng từ vựng một cách tự tin. "
-                            data-caption="Học cùng Memrise là một cách giúp bạn vừa vui chơi, dễ dàng tăng cường trí nhớ!"
-                            class="option-btn"><i class="option-share"></i>Chia sẻ với bạn bè</a></li><li><span
-                            class="option-btn"><i class="option-delete"></i>Bỏ khóa học</span></li></ul></span></div>
-                          <div class="wrapper">
-                            <div class="course-progress">
-                              <div class="right"><span>Đã học 1 / 398 từ</span></div>
-                              <div class="progress-bar-container">
-                                <div style="width: 0%" class="progress-bar"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
-                </div>
-              </div>
-              <div id="course-342958" class="course-card-container js-course-card-container">
-                <div class="course-progress-box">
-                  <div class="card-top">
-                    <div class="card-image-col"><a href="/course/342958/tu-vung-toeic-quan-trong-cap-2/">
-                      <div class="img-crop"><img
-                        src="images/3290649000160901073149.png"
-                        class="course-photo"><img
-                        src="images/en.png" class="category-photo">
-                      </div>
-                    </a></div>
-                    <div class="card-main-container">
-                      <div class="top-main">
-                        <div class="wrapper">
-                          <div class="detail"><p title="Từ vựng TOEIC quan trọng - Cấp 2" class="title"><a
-                            href="/course/342958/tu-vung-toeic-quan-trong-cap-2/">Từ vựng TOEIC quan trọng - Cấp 2</a>
-                          </p>
-                          </div>
-                          <div class="pull-right"><span title="Hãy đặt mục tiêu học tập cho mình"
-                                                        class="simple-btn goal-setter-btn inactive">
-                          </span><a
-                            href="/course/342958/tu-vung-toeic-quan-trong-cap-2/leaderboard"><span
-                            class="simple-btn leaderboard-btn"><span class="leaderboard-icon"></span></span></a><span
-                            class="ctrl-btn"><span class="icon"></span><ul class="tooltip"><li><a
-                            href="/course/342958/tu-vung-toeic-quan-trong-cap-2/" class="option-btn"><i
-                            class="option-pin"></i>Thông tin khóa học</a></li><li><a href="#"
-                                                                                     data-url="/course/342958/tu-vung-toeic-quan-trong-cap-2/"
-                                                                                     data-title="Từ vựng TOEIC quan trọng - Cấp 2"
-                                                                                     data-picture="images/3290649000160901073149.png"
-                                                                                     data-description="Những từ bắt buộc phải biết để đạt trình độ 450-500.
-
-Để xem hướng dẫn cách học, hãy vào trang: toeicmoingay.com/tu-vung"
-                                                                                     data-caption="Học cùng Memrise là một cách giúp bạn vừa vui chơi, dễ dàng tăng cường trí nhớ!"
-                                                                                     class="option-btn"><i
-                            class="option-share"></i>Chia sẻ với bạn bè</a></li><li><span class="option-btn"><i
-                            class="option-delete"></i>Bỏ khóa học</span></li></ul></span></div>
-                          <div class="wrapper">
-                            <div class="course-progress">
-                              <div class="right"><span>Đã học 0 / 511 từ</span></div>
-                              <div class="progress-bar-container">
-                                <div style="width: 0%" class="progress-bar"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div id="course-875256" class="course-card-container js-course-card-container">
-                <div class="course-progress-box">
-                  <div class="card-top">
-                    <div class="card-image-col"><a href="/course/875256/1000-tu-tieng-anh-trung-cap/">
-                      <div class="img-crop"><img
-                        src="images/2224242000151111145003.png"
-                        class="course-photo"><img
-                        src="images/en.png" class="category-photo">
-                      </div>
-                    </a></div>
-                    <div class="card-main-container">
-                      <div class="top-main">
-                        <div class="wrapper">
-                          <div class="detail"><p title="1000 từ tiếng Anh trung cấp" class="title"><a
-                            href="/course/875256/1000-tu-tieng-anh-trung-cap/">1000 từ tiếng Anh trung cấp</a></p></div>
-                          <div class="pull-right"><span title="Hãy đặt mục tiêu học tập cho mình"
-                                                        class="simple-btn goal-setter-btn inactive">
-                          </span><a
-                            href="/course/875256/1000-tu-tieng-anh-trung-cap/leaderboard"><span
-                            class="simple-btn leaderboard-btn"><span class="leaderboard-icon"></span></span></a><span
-                            class="ctrl-btn"><span class="icon"></span><ul class="tooltip"><li><a
-                            href="/course/875256/1000-tu-tieng-anh-trung-cap/" class="option-btn"><i
-                            class="option-pin"></i>Thông tin khóa học</a></li><li><a href="#"
-                                                                                     data-url="/course/875256/1000-tu-tieng-anh-trung-cap/"
-                                                                                     data-title="1000 từ tiếng Anh trung cấp"
-                                                                                     data-picture="images/2224242000151111145003.png"
-                                                                                     data-description="Vui học tiếng Anh cùng công cụ xây dựng vốn từ nền tảng! Tập trung vào
-những từ vựng cần thiết nhất, bao gồm danh từ, động từ, tính từ, và
-trạng từ. Khóa học này dạy bạn những từ vựng dựa theo mức độ thông
-dụng của chúng trong tiếng Anh. Vì vậy, bạn sẽ luôn học được những từ
-vựng thiết thực nhất!" data-caption="Học cùng Memrise là một cách giúp bạn vừa vui chơi, dễ dàng tăng cường trí nhớ!"
-                                                                                     class="option-btn"><i
-                            class="option-share"></i>Chia sẻ với bạn bè</a></li><li><span class="option-btn"><i
-                            class="option-delete"></i>Bỏ khóa học</span></li></ul></span></div>
-                          <div class="wrapper">
-                            <div class="course-progress">
-                              <div class="right"><span>Đã học 0 / 1000 từ</span></div>
-                              <div class="progress-bar-container">
-                                <div style="width: 0%" class="progress-bar"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div id="course-1658724" class="course-card-container js-course-card-container">
-                <div class="course-progress-box">
-                  <div class="card-top">
-                    <div class="card-image-col"><a href="/course/1658724/tieng-anh-anh-quoc-1/">
-                      <div class="img-crop"><img
-                        src="images/26802741000170926160048.png"
-                        class="course-photo"><img
-                        src="images/en.png" class="category-photo">
-                      </div>
-                    </a></div>
-                    <div class="card-main-container">
-                      <div class="top-main">
-                        <div class="wrapper">
-                          <div class="detail"><p title="Tiếng Anh (Anh Quốc) 1" class="title"><a
-                            href="/course/1658724/tieng-anh-anh-quoc-1/">Tiếng Anh (Anh Quốc) 1</a></p></div>
-                          <div class="pull-right"><span title="Hãy đặt mục tiêu học tập cho mình"
-                                                        class="simple-btn goal-setter-btn inactive">
-                          </span><a
-                            href="/course/1658724/tieng-anh-anh-quoc-1/leaderboard"><span
-                            class="simple-btn leaderboard-btn"><span class="leaderboard-icon"></span></span></a><span
-                            class="ctrl-btn"><span class="icon"></span><ul class="tooltip"><li><a
-                            href="/course/1658724/tieng-anh-anh-quoc-1/" class="option-btn"><i class="option-pin"></i>Thông tin khóa học</a></li><li><a
-                            href="#" data-url="/course/1658724/tieng-anh-anh-quoc-1/"
-                            data-title="Tiếng Anh (Anh Quốc) 1"
-                            data-picture="images/26802741000170926160048.png"
-                            data-description="Tự giới thiệu bản thân, khám phá xung quanh, và học các câu nói đời thường hữu ích sẽ làm mọi người cười ngạc nhiên."
-                            data-caption="Học cùng Memrise là một cách giúp bạn vừa vui chơi, dễ dàng tăng cường trí nhớ!"
-                            class="option-btn"><i class="option-share"></i>Chia sẻ với bạn bè</a></li><li><span
-                            class="option-btn"><i class="option-delete"></i>Bỏ khóa học</span></li></ul></span></div>
-                          <div class="wrapper">
-                            <div class="course-progress">
-                              <div class="right"><span>Đã học 0 / 209 từ</span></div>
-                              <div class="progress-bar-container">
-                                <div style="width: 0%" class="progress-bar"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
             </div>
           </div>
 
@@ -298,7 +112,4 @@ vựng thiết thực nhất!" data-caption="Học cùng Memrise là một cách
 
 
   <div ng-include="'views/footer.html'"></div>
-
-
-  <div id="mode-selector-modal-wrapper"></div>
 </div>
