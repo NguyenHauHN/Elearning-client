@@ -19,13 +19,13 @@
 
     <ul class="header-nav ">
 
-      <li class="header-nav-item plain ">
+      <li class="header-nav-item plain " ng-class="{'is-active': currState == 'home'}">
         <a ui-sref="home" class="nav-item-btn">
           <span class="nav-item-btn-text">Trang chủ</span>
         </a>
       </li>
 
-      <li class="header-nav-item plain is-active">
+      <li class="header-nav-item plain" ng-class="{'is-active': currState == 'courses'}">
         <a ui-sref="courses" class="nav-item-btn">
           <span class="nav-item-btn-text">Khóa học</span>
         </a>

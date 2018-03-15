@@ -31,13 +31,13 @@
             <div class="content-stats">
               <div class="left">
                 <p class="placeholder js-placeholder" style="display: none;"></p>
-                <p class="number js-num" style="display: block;">{{userInfo.word_learned}}</p>
+                <p class="number js-num" style="display: block;">{{userInfo.word_learned || 0}}</p>
                 <p class="text">từ học được</p>
               </div>
               <div class="center"></div>
               <div class="right">
                 <p class="placeholder js-placeholder" style="display: none;"></p>
-                <p class="number js-num" style="display: block;">{{userInfo.scored | number}}</p>
+                <p class="number js-num" style="display: block;">{{(userInfo.scored | number) || 0}}</p>
                 <p class="text">điểm</p>
               </div>
             </div>

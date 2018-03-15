@@ -98,7 +98,10 @@
                 <p class="text-green" ng-if="successText && !errorText">{{successText}}</p>
                 <p class="text-red" ng-if="errorText && !successText">{{errorText}}</p>
 
-                <input type="submit" class="btn-success btn-large" value="Đăng ký" tabindex="3">
+                <button type="submit" class="btn-success btn-large" ng-class="{'disabled':loadingRegister }">
+                  <i ng-class="{'fa-spinner fa-spin fa-2x': loadingRegister}" class="fas "></i>
+                  <span ng-if="!loadingRegister">Đăng ký</span>
+                </button>
 
               </form>
             </div>
