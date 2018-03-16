@@ -43,7 +43,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $resourceProvider) {
     })
     .state({
       name: "lesson",
-      url: "/lesson/{id}",
+      url: "/courses/{id_course}/lessons/{id_lesson}",
       templateUrl: "views/lesson.html",
       controller: "LessonController"
     })
@@ -61,7 +61,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $resourceProvider) {
     })
     .state({
       name: "learnLesson",
-      url: "/lesson/{idLesson}/learn",
+      url: "/courses/{id_course}/lessons/{id_lesson}/learn",
       templateUrl: "views/learn-lesson.html",
       controller: "LearnLessonController"
     });

@@ -11,24 +11,24 @@
                     <span class="details js-course-details sel-course-details">Học 5 từ mới</span>
                 </span>
           <span class="course-title">
-                    <span class="title js-course-title">400 từ TOEFL - Tiếng Anh - Thức ăn và Trồng trọt</span>
+                    <span class="title js-course-title">400 từ TOEFL - Tiếng Anh - {{learnLessonData.name}}</span>
                 </span>
         </div>
         <div class="header-points">
 
           <div class="points-wrapper">
-            <span class="points-num">0</span>
+            <span class="points-num">{{totalMark}}</span>
           </div>
         </div>
       </div>
       <div class="bar-wrapper">
-        <div class="bar js-bar" style="width: 0%;"></div>
+        <div class="bar js-bar" ng-style="{'width': totalMark + '%'}"></div>
       </div>
     </div>
 
     <div class="header-block header-right">
       <div class="header-exit">
-        <a class="session-exit" href="/home/"></a>
+        <a class="session-exit" ui-sref="lesson({id_course: idCourse, id_lesson: idLesson})"></a>
       </div>
     </div>
   </div>
@@ -43,142 +43,200 @@
     <div class="loading-screen" style="display: none;">
       <div class="loading-spinner"></div>
     </div>
-
-
     <div id="central-area" class="central-area js-central-area" style="display: block;">
       <div id="boxes">
         <div class="garden-box presentation show-more show-want-mem multiple_choice">
           <button class="next-button btn btn-inverse clearfix sel-next-button" title="Tiếp [Phím tắt : Enter]"
-                  style="display: inline-block;">
+                  style="display: inline-block;" ng-click="nextQuestion()" ng-if="learnLessonData"
+                  ng-hide="indexActiveQuestion == learnLessonData.questions.length - 1">
             <span class="next-icon"></span>
             <div class="next-text">Tiếp</div>
           </button>
+          <div ng-repeat="question in learnLessonData.questions track by $index">
+            <div class="thing-show sel-thing-show show-more"
+                 ng-class="{'hide-question': indexActiveQuestion !== $index, 'show-question': indexActiveQuestion === $index}"
+                 ng-if="question.type == 1">
+              <div class="columns have-attributes">
+                <div class="row column  primary">
+                  <div class="row-label">Tiếng Anh</div>
+                  <div class="row-value">
+                    <div class="primary-value">
+                      cultivation
+                    </div>
+                  </div>
+                </div>
+                <div class="row column  secondary">
+                  <div class="row-label">Định nghĩa tiếng Anh</div>
+                  <div class="row-value">
+                    <div class="primary-value">
+                      the process of preparing the land for growing crops
+                    </div>
+                  </div>
+                </div>
+                <div class="row column  ">
+                  <div class="row-label">Tiếng Việt</div>
+                  <div class="row-value">
+                    <div class="primary-value">
+                      sự trồng trọt
+                    </div>
+                    <div class="alts">
+                      <span class="alt">trồng trọt</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row column first-audio">
+                  <div class="row-value">
+                    <div class="primary-value">
+                      <a class="audio-player audio-player-hover"
+                         href="https://d2rhekw5qr4gcj.cloudfront.net/uploads/things/audio/18516258_150515_2041_11.mp3"></a>
+                    </div>
+                  </div>
+                </div>
 
-          <div class="thing-show sel-thing-show show-more" ng-if="typeQuestion == 1">
-            <div class="columns have-attributes">
-              <div class="row column  primary">
-                <div class="row-label">Tiếng Anh</div>
-                <div class="row-value">
-                  <div class="primary-value">
-                    cultivation
+              </div>
+              <div class="attributes">
+                <div class="row attribute">
+                  <div class="row-label">Từ loại</div>
+                  <div class="row-value">
+                    <span class="badge" title="Loại từ ">danh từ</span>
                   </div>
                 </div>
               </div>
-              <div class="row column  secondary">
-                <div class="row-label">Định nghĩa tiếng Anh</div>
-                <div class="row-value">
-                  <div class="primary-value">
-                    the process of preparing the land for growing crops
-                  </div>
-                </div>
-              </div>
-              <div class="row column  ">
-                <div class="row-label">Tiếng Việt</div>
-                <div class="row-value">
-                  <div class="primary-value">
-                    sự trồng trọt
-                  </div>
-                  <div class="alts">
-                    <span class="alt">trồng trọt</span>
-                  </div>
-                </div>
-              </div>
-              <div class="row column first-audio">
-                <div class="row-value">
-                  <div class="primary-value">
-                    <a class="audio-player audio-player-hover"
-                       href="https://d2rhekw5qr4gcj.cloudfront.net/uploads/things/audio/18516258_150515_2041_11.mp3"></a>
-                  </div>
-                </div>
-              </div>
+            </div>
 
-            </div>
-            <div class="attributes">
-              <div class="row attribute">
-                <div class="row-label">Từ loại</div>
-                <div class="row-value">
-                  <span class="badge" title="Loại từ ">danh từ</span>
+            <div
+              ng-class="{'hide-question': indexActiveQuestion !== $index, 'show-question': indexActiveQuestion === $index}"
+              ng-if="question.type == 2 || question.type == 3">
+              <div class="question-row clearfix with-attributes">
+                <div class="graphic"></div>
+                <div class="qquestion qtext  ">
+                  {{question.title}}
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div ng-if="typeQuestion == 2">
-            <div class="question-row clearfix with-attributes">
-              <div class="graphic"></div>
-              <div class="qquestion qtext  ">
-                to leave, to give up
-                <div class="qattributes">
-                  <span class="badge" title="Loại từ ">động từ</span>
-                </div>
-              </div>
-              <div class="extra-info  ">từ bỏ</div>
-            </div>
-            <div class="hint">
+              <div class="hint">
               <span class="hint-text">
                       Chọn câu trả lời phù hợp
               </span>
+              </div>
+
+              <ol class="choices unchosen clearfix  grid">
+                <li class="shiny-box choice clearfix"
+                    ng-click="chooseAnswer($index, $index + 'answerA', question, question.answerA)"
+                    ng-class="{'correct': rightAnswer[$index+ 'answerA'] == true, 'incorrect': rightAnswer[$index+ 'answerA'] == false,
+                    'disable-answer': disableAllAnswer}">
+                  <span class="index">1.</span>
+                  <span class="val  ">{{question.answerA}}</span>
+                  <span class="marking-icon"></span>
+                </li>
+                <li class="shiny-box choice clearfix"
+                    ng-click="chooseAnswer($index, $index + 'answerB', question, question.answerB)"
+                    ng-class="{'correct': rightAnswer[$index+ 'answerB'] == true, 'incorrect': rightAnswer[$index+ 'answerB'] == false,
+                    'disable-answer': disableAllAnswer}">
+                  <span class="index">2.</span>
+                  <span class="val  ">{{question.answerB}}</span>
+                  <span class="marking-icon"></span>
+                </li>
+                <li class="shiny-box choice clearfix"
+                    ng-click="chooseAnswer($index, $index + 'answerC', question, question.answerC)"
+                    ng-class="{'correct': rightAnswer[$index+ 'answerC'] == true, 'incorrect': rightAnswer[$index+ 'answerC'] == false,
+                    'disable-answer': disableAllAnswer}">
+                  <span class="index">3.</span>
+                  <span class="val  ">{{question.answerC}}</span>
+                  <span class="marking-icon"></span>
+                </li>
+                <li class="shiny-box choice clearfix"
+                    ng-click="chooseAnswer($index, $index + 'answerD', question, question.answerD)"
+                    ng-class="{'correct': rightAnswer[$index+ 'answerD'] == true, 'incorrect': rightAnswer[$index+ 'answerD'] == false,
+                    'disable-answer': disableAllAnswer}">
+                  <span class="index">4.</span>
+                  <span class="val  ">{{question.answerD}}</span>
+                  <span class="marking-icon"></span>
+                </li>
+              </ol>
             </div>
 
-            <ol class="choices unchosen clearfix  grid">
-              <li class="shiny-box choice clearfix" data-choice-id="0">
-                <span class="index">1.</span>
-                <span class="val  ">deviant</span>
-                <span class="marking-icon"></span>
-              </li>
-              <li class="shiny-box choice clearfix" data-choice-id="1">
-                <span class="index">2.</span>
-                <span class="val  ">to abandon</span>
-                <span class="marking-icon"></span>
-              </li>
-              <li class="shiny-box choice clearfix" data-choice-id="2">
-                <span class="index">3.</span>
-                <span class="val  ">to adjust</span>
-                <span class="marking-icon"></span>
-              </li>
-              <li class="shiny-box choice clearfix active" data-choice-id="3">
-                <span class="index">4.</span>
-                <span class="val  ">to aggravate</span>
-                <span class="marking-icon"></span>
-              </li>
-            </ol>
-          </div>
+            <div
+              ng-class="{'hide-question': indexActiveQuestion !== $index, 'show-question': indexActiveQuestion === $index}"
+              ng-if="question.type == 4">
+              <div class="question-row clearfix with-attributes">
+                <div class="graphic"></div>
+                <div class="qquestion qtext  ">
+                  {{question.title}}
+                </div>
+              </div>
 
-          <div ng-if="typeQuestion == 5">
-            <div class="question-row clearfix with-attributes">
-              <div class="">
-                <a class="audio-player audio-player-hover" href="https://d2rhekw5qr4gcj.cloudfront.net/uploads/things/audio/18516258_150515_2041_11.mp3"></a>
+              <div class="hint">
+        <span class="hint-text">
+                    Nhập được đọc trong audio ở phía trên và bấm Xem câu trả lời:
+        </span>
+              </div>
+
+              <div class="typing-wrapper">
+                <input type="text" class="roundy shiny-box typing-type-here " ng-model="answerType"
+                       ng-class="{'border-red': emptyAnswerType, 'correct disable-answer': rightAnswer[$index],'incorrect disable-answer': rightAnswer[$index] == false}">
+              </div>
+
+              <div class="cnt">
+                <a class="do-review btn btn-transparent" title="Ôn tập từ này [Phím tắt : Escape]"
+                   ng-click="checkAnswerType4($index, answerType)">
+                  <i class="ico ico-loop"></i>
+                  Xem câu trả lời
+                </a>
               </div>
             </div>
-            <div class="hint">
+
+            <div
+              ng-class="{'hide-question': indexActiveQuestion !== $index, 'show-question': indexActiveQuestion === $index}"
+              ng-if="question.type == 5">
+              <div class="question-row clearfix with-attributes">
+                <div class="">
+                  <a class="audio-player audio-player-hover"
+                     href="https://d2rhekw5qr4gcj.cloudfront.net/uploads/things/audio/18516258_150515_2041_11.mp3"></a>
+                </div>
+              </div>
+              <div class="hint">
               <span class="hint-text">
                       Chọn câu trả lời phù hợp
               </span>
-            </div>
+              </div>
 
-            <ol class="choices unchosen clearfix  grid">
-              <li class="shiny-box choice clearfix" data-choice-id="0">
-                <span class="index">1.</span>
-                <span class="val  ">deviant</span>
-                <span class="marking-icon"></span>
-              </li>
-              <li class="shiny-box choice clearfix" data-choice-id="1">
-                <span class="index">2.</span>
-                <span class="val  ">to abandon</span>
-                <span class="marking-icon"></span>
-              </li>
-              <li class="shiny-box choice clearfix" data-choice-id="2">
-                <span class="index">3.</span>
-                <span class="val  ">to adjust</span>
-                <span class="marking-icon"></span>
-              </li>
-              <li class="shiny-box choice clearfix" data-choice-id="3">
-                <span class="index">4.</span>
-                <span class="val  ">to aggravate</span>
-                <span class="marking-icon"></span>
-              </li>
-            </ol>
+              <ol class="choices unchosen clearfix  grid">
+                <li class="shiny-box choice clearfix"
+                    ng-click="chooseAnswer($index, $index + 'answerA', question, question.answerA)"
+                    ng-class="{'correct': rightAnswer[$index+ 'answerA'] == true, 'incorrect': rightAnswer[$index+ 'answerA'] == false,
+                    'disable-answer': disableAllAnswer}">
+                  <span class="index">1.</span>
+                  <span class="val  ">{{question.answerA}}</span>
+                  <span class="marking-icon"></span>
+                </li>
+                <li class="shiny-box choice clearfix"
+                    ng-click="chooseAnswer($index, $index + 'answerB', question, question.answerB)"
+                    ng-class="{'correct': rightAnswer[$index+ 'answerB'] == true, 'incorrect': rightAnswer[$index+ 'answerB'] == false,
+                    'disable-answer': disableAllAnswer}">
+                  <span class="index">2.</span>
+                  <span class="val  ">{{question.answerB}}</span>
+                  <span class="marking-icon"></span>
+                </li>
+                <li class="shiny-box choice clearfix"
+                    ng-click="chooseAnswer($index, $index + 'answerC', question, question.answerC)"
+                    ng-class="{'correct': rightAnswer[$index+ 'answerC'] == true, 'incorrect': rightAnswer[$index+ 'answerC'] == false,
+                    'disable-answer': disableAllAnswer}">
+                  <span class="index">3.</span>
+                  <span class="val  ">{{question.answerC}}</span>
+                  <span class="marking-icon"></span>
+                </li>
+                <li class="shiny-box choice clearfix"
+                    ng-click="chooseAnswer($index, $index + 'answerD', question, question.answerD)"
+                    ng-class="{'correct': rightAnswer[$index+ 'answerD'] == true, 'incorrect': rightAnswer[$index+ 'answerD'] == false,
+                    'disable-answer': disableAllAnswer}">
+                  <span class="index">4.</span>
+                  <span class="val  ">{{question.answerD}}</span>
+                  <span class="marking-icon"></span>
+                </li>
+              </ol>
+            </div>
           </div>
+
         </div>
       </div>
     </div>

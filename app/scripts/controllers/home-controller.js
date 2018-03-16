@@ -4,7 +4,6 @@
 app.controller('HomeController', function ($scope, HomeService) {
   var idCurrentUser = localStorage.getItem("iduser");
 
-
   $scope.getOwnCourse = function () {
     if (idCurrentUser) {
       HomeService.query({id_user: idCurrentUser}, function (data) {
@@ -17,7 +16,6 @@ app.controller('HomeController', function ($scope, HomeService) {
 
   $scope.getUserInfo = function () {
     HomeService.get({id_user: idCurrentUser}, function (data) {
-      console.log(data);
       $scope.userInfo = data;
     }, function (err) {
       console.log(err);

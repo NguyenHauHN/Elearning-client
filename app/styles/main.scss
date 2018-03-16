@@ -1,19 +1,32 @@
 @font-face {
-    font-family: LoraBold;
-    src: url(../fonts/Lora-Bold.ttf);
+  font-family: LoraBold;
+  src: url(../fonts/Lora-Bold.ttf);
 }
 
 @font-face {
-    font-family: LoraBoldItalic;
-    src: url(../fonts/Lora-BoldItalic.ttf);
+  font-family: LoraBoldItalic;
+  src: url(../fonts/Lora-BoldItalic.ttf);
 }
 
 @font-face {
-    font-family: LoraItalic;
-    src: url(../fonts/Lora-Italic.ttf);
+  font-family: LoraItalic;
+  src: url(../fonts/Lora-Italic.ttf);
 }
 
 @font-face {
-    font-family: LoraRegular;
-    src: url(../fonts/Lora-Regular.ttf);
+  font-family: LoraRegular;
+  src: url(../fonts/Lora-Regular.ttf);
+}
+
+.hide-question {
+  display: none;
+}
+
+.show-question {
+  display: block;
+}
+
+.disable-answer {
+  pointer-events: none;
+  opacity: 0.4;
 }
