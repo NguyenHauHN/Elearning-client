@@ -11,34 +11,23 @@
                 <div class="course-header course-header-fat clearfix">
 
 
-                    <a href="/course/1658724/tieng-anh-anh-quoc-1/" class="course-photo">
+                    <a ui-sref="detailCourses({id_course: infoCourse.idcourse})" class="course-photo">
                         <img
-                              src="https://d2rhekw5qr4gcj.cloudfront.net/img/400sqf/from/uploads/course_photos/26802741000170926160048.png">
+                              ng-src="{{infoCourse.image}}">
                     </a>
 
                     <div class="course-details">
                         <div class="course-breadcrumb">
-                            <a href="/vi/courses/vietnamese/">Khóa học</a>
+                            <a ui-sref="courses">Khóa học</a>
 
 
                             <i class="ico ico-grey ico-arr-right ico-s"></i>
-                            <a href="/vi/courses/vietnamese/languages/">
-                                Languages
-                            </a>
-
-                            <i class="ico ico-grey ico-arr-right ico-s"></i>
-                            <a href="/vi/courses/vietnamese/european/">
-                                European
-                            </a>
-
-
-                            <i class="ico ico-grey ico-arr-right ico-s"></i>
-                            <a href="/vi/courses/vietnamese/english/">
-                                English
+                            <a ui-sref="detailCourses({id_course: infoCourse.idcourse})">
+                                {{infoCourse.name}}
                             </a>
                         </div>
 
-                        <a href="/course/1658724/tieng-anh-anh-quoc-1/" accesskey="c">
+                        <a ui-sref="detailCourses({id_course: infoCourse.idcourse})" accesskey="c">
                             <h1 class="course-name sel-course-name" itemprop="name">{{infoCourse.name}}</h1>
                         </a>
                         <span class="course-description text" itemprop="about">{{infoCourse.description}}</span>
@@ -224,9 +213,9 @@
                                                                                        data-direction="right">hậu_nguyễn176</span></span><span
                                       class="row-points"><span>0</span></span></li>
                             </ul>
-                            <div class="leaderboard-link"><a href="/course/1658724/tieng-anh-anh-quoc-1/leaderboard/">Xem
-                                thêm</a>
-                            </div>
+                            <!--<div class="leaderboard-link"><a href="/course/1658724/tieng-anh-anh-quoc-1/leaderboard/">Xem-->
+                                <!--thêm</a>-->
+                            <!--</div>-->
                         </div>
                     </div>
                 </div>
