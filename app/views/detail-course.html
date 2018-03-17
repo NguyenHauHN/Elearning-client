@@ -85,28 +85,11 @@
             </div>
             <div class="actions actions-left">
               <div class="btn-group">
-                <button class="button small dropdown-toggle" data-toggle="dropdown"
-                        ng-click="openDropdown = !openDropdown">
-                  <span class="ico ico-arr-down"></span>
-                  <span class="text">Tùy chọn</span>
+                <button class="button small dropdown-toggle"
+                        ng-click="quitCourse()">
+                  <span class="text">Thoát khóa học</span>
                 </button>
-                <ul class="dropdown-menu" ng-class="{'display-block':openDropdown }">
 
-
-                  <li>
-                    <a href="#" data-role="course-restart">
-                      <span class="ico ico-loop"></span>
-                      Bắt đầu lại
-                    </a>
-                  </li>
-                  <li>
-                    <a  data-role="course-unenroll" ng-click="quitCourse()">
-                      <i class="ico ico-stop"></i>
-                      Thoát
-                    </a>
-                  </li>
-
-                </ul>
               </div>
             </div>
           </div>
