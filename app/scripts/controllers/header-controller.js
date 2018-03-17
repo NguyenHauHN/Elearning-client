@@ -10,5 +10,11 @@ app.controller('HeaderController', function ($scope, $window, $location, $state)
     $location.path('/login');
   }
 
+  $scope.activeMenu = function (uisref) {
+    if(uisref == "home"){
+
+    }
+  }
+
 
 });

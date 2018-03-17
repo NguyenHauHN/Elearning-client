@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9507edd-fc7d-495d-b874-e8c316054391" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
+      <change beforePath="$PROJECT_DIR$/app/scripts/controllers/about.js" afterPath="" />
       <change beforePath="$PROJECT_DIR$/app/scripts/controllers/courses-controller.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/courses-controller.js" />
-      <change beforePath="$PROJECT_DIR$/app/scripts/controllers/detail-course-controller.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/detail-course-controller.js" />
+      <change beforePath="$PROJECT_DIR$/app/scripts/controllers/header-controller.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/header-controller.js" />
       <change beforePath="$PROJECT_DIR$/app/scripts/controllers/learn-leson-controller.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/learn-leson-controller.js" />
-      <change beforePath="$PROJECT_DIR$/app/scripts/controllers/lesson-controller.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/lesson-controller.js" />
+      <change beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterPath="" />
       <change beforePath="$PROJECT_DIR$/app/scripts/services/course-service.js" afterPath="$PROJECT_DIR$/app/scripts/services/course-service.js" />
-      <change beforePath="$PROJECT_DIR$/app/views/about.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/views/detail-course.html" afterPath="$PROJECT_DIR$/app/views/detail-course.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/home.html" afterPath="$PROJECT_DIR$/app/views/home.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/lesson.html" afterPath="$PROJECT_DIR$/app/views/lesson.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/main.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change beforePath="$PROJECT_DIR$/test/karma.conf.js" afterPath="$PROJECT_DIR$/test/karma.conf.js" />
+      <change beforePath="$PROJECT_DIR$/app/views/courses.html" afterPath="$PROJECT_DIR$/app/views/courses.html" />
+      <change beforePath="$PROJECT_DIR$/app/views/header-loggedin.html" afterPath="$PROJECT_DIR$/app/views/header-loggedin.html" />
+      <change beforePath="$PROJECT_DIR$/app/views/learn-lesson.html" afterPath="$PROJECT_DIR$/app/views/learn-lesson.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,41 +25,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="44" column="19" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="courses-controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/courses-controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="detail-course.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/detail-course.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="133" column="168" lean-forward="false" selection-start-line="133" selection-start-column="168" selection-end-line="133" selection-end-column="168" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lesson.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/lesson.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="learn-leson-controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/learn-leson-controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lesson-controller.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/lesson-controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="27" column="76" lean-forward="false" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
+            <state relative-caret-position="281">
+              <caret line="44" column="24" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="49" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -74,18 +58,18 @@
       <file leaf-file-name="course-service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/services/course-service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="26" />
+            <state relative-caret-position="187">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <file leaf-file-name="courses.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/courses.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="31" />
+            <state relative-caret-position="442">
+              <caret line="98" column="83" lean-forward="false" selection-start-line="98" selection-start-column="83" selection-end-line="98" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -165,7 +149,6 @@
         <option value="$PROJECT_DIR$/app/scripts/services/login-service.js" />
         <option value="$PROJECT_DIR$/app/styles/home.scss" />
         <option value="$PROJECT_DIR$/app/scripts/services/register-service.js" />
-        <option value="$PROJECT_DIR$/app/views/courses.html" />
         <option value="$PROJECT_DIR$/app/scripts/services/home-service.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/profile-controller.js" />
         <option value="$PROJECT_DIR$/app/scripts/services/lesson-service.js" />
@@ -175,8 +158,6 @@
         <option value="$PROJECT_DIR$/app/scripts/controllers/register-controller.js" />
         <option value="$PROJECT_DIR$/app/views/register.html" />
         <option value="$PROJECT_DIR$/app/views/login.html" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/header-controller.js" />
-        <option value="$PROJECT_DIR$/app/views/header-loggedin.html" />
         <option value="$PROJECT_DIR$/app/scripts/services/question-service.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/home-controller.js" />
         <option value="$PROJECT_DIR$/lab/type-4.html" />
@@ -185,18 +166,21 @@
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/styles/main.scss" />
         <option value="$PROJECT_DIR$/app/scripts/services/questions-service.js" />
-        <option value="$PROJECT_DIR$/app/views/learn-lesson.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/lab/detai-course-not-register.html" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/views/home.html" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/courses-controller.js" />
-        <option value="$PROJECT_DIR$/app/scripts/services/course-service.js" />
         <option value="$PROJECT_DIR$/app/views/detail-course.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/detail-course-controller.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/lesson-controller.js" />
         <option value="$PROJECT_DIR$/app/views/lesson.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/learn-leson-controller.js" />
+        <option value="$PROJECT_DIR$/app/views/learn-lesson.html" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/header-controller.js" />
+        <option value="$PROJECT_DIR$/app/views/header-loggedin.html" />
+        <option value="$PROJECT_DIR$/app/scripts/services/course-service.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/courses-controller.js" />
+        <option value="$PROJECT_DIR$/app/views/courses.html" />
       </list>
     </option>
   </component>
@@ -598,7 +582,6 @@
     <entry file="file://$PROJECT_DIR$/app/scripts/services/register-service.js" />
     <entry file="file://$PROJECT_DIR$/app/styles/home.scss" />
     <entry file="file://$PROJECT_DIR$/app/scripts/services/login-service.js" />
-    <entry file="file://$PROJECT_DIR$/app/views/courses.html" />
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/profile-controller.js" />
     <entry file="file://$PROJECT_DIR$/app/scripts/services/home-service.js" />
     <entry file="file://$PROJECT_DIR$/app/views/profile.html" />
@@ -611,8 +594,6 @@
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/register-controller.js" />
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/login-controller.js" />
     <entry file="file://$PROJECT_DIR$/app/views/register.html" />
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/header-controller.js" />
-    <entry file="file://$PROJECT_DIR$/app/views/header-loggedin.html" />
     <entry file="file://$PROJECT_DIR$/app/scripts/services/question-service.js" />
     <entry file="file://$PROJECT_DIR$/app/scripts/services/lesson-service.js" />
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/home-controller.js" />
@@ -623,7 +604,6 @@
     <entry file="file://$PROJECT_DIR$/lab/type-4.html" />
     <entry file="file://$PROJECT_DIR$/app/styles/main.scss" />
     <entry file="file://$PROJECT_DIR$/app/scripts/services/questions-service.js" />
-    <entry file="file://$PROJECT_DIR$/app/views/learn-lesson.html" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -660,34 +640,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="77" column="86" lean-forward="false" selection-start-line="77" selection-start-column="86" selection-end-line="77" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/courses-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/detail-course.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="133" column="168" lean-forward="false" selection-start-line="133" selection-start-column="168" selection-end-line="133" selection-end-column="168" />
           <folding />
         </state>
       </provider>
@@ -700,11 +656,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/course-service.js">
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/lesson-controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="26" />
+        <state relative-caret-position="289">
+          <caret line="17" column="25" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="17" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/learn-leson-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="47" column="21" lean-forward="false" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/learn-lesson.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="104" lean-forward="false" selection-start-line="10" selection-start-column="104" selection-end-line="10" selection-end-column="104" />
+          <folding>
+            <marker date="1521254924107" expanded="true" signature="5146:5307" ph="{&quot;disable-answer&quot;: disableAllAnswer...}" />
+            <marker date="1521254924107" expanded="true" signature="5683:5844" ph="{&quot;disable-answer&quot;: disableAllAnswer...}" />
+            <marker date="1521254924107" expanded="true" signature="6220:6381" ph="{&quot;disable-answer&quot;: disableAllAnswer...}" />
+            <marker date="1521254924107" expanded="true" signature="6757:6918" ph="{&quot;disable-answer&quot;: disableAllAnswer...}" />
+            <marker date="1521254924107" expanded="true" signature="9348:9509" ph="{&quot;disable-answer&quot;: disableAllAnswer...}" />
+            <marker date="1521254924107" expanded="true" signature="9885:10046" ph="{&quot;disable-answer&quot;: disableAllAnswer...}" />
+            <marker date="1521254924107" expanded="true" signature="10422:10583" ph="{&quot;disable-answer&quot;: disableAllAnswer...}" />
+            <marker date="1521254924107" expanded="true" signature="10959:11120" ph="{&quot;disable-answer&quot;: disableAllAnswer...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -716,18 +697,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/learn-leson-controller.js">
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/header-controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        <state relative-caret-position="85">
+          <caret line="5" column="42" lean-forward="true" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/lesson-controller.js">
+    <entry file="file://$PROJECT_DIR$/app/views/header-loggedin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="27" column="76" lean-forward="false" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
+        <state relative-caret-position="170">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="44" column="19" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/course-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/detail-course.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="44" column="24" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="49" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/courses-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/courses.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="98" column="83" lean-forward="false" selection-start-line="98" selection-start-column="83" selection-end-line="98" selection-end-column="83" />
           <folding />
         </state>
       </provider>

@@ -1,7 +1,7 @@
 /**
  * Created by haunguyen on 11/03/2018.
  */
-app.controller('LearnLessonController', function ($scope, $state, QuestionsService, $timeout) {
+app.controller('LearnLessonController', function ($scope, $state, QuestionsService, $timeout, CourseService, LeesonService) {
   $scope.indexActiveQuestion = 0;
   $scope.idLesson = $state.params.id_lesson;
   $scope.idCourse = $state.params.id_course;
@@ -10,6 +10,7 @@ app.controller('LearnLessonController', function ($scope, $state, QuestionsServi
   $scope.rightAnswer = {};
   $scope.disableAllAnswer = false;
   $scope.numRightAnswer = 0;
+  var idUser = localStorage.getItem('iduser');
 
   $scope.getQuestions = function () {
     QuestionsService.query({id_lesson: $scope.idLesson}, function (data) {
@@ -23,6 +24,35 @@ app.controller('LearnLessonController', function ($scope, $state, QuestionsServi
   }
 
   $scope.getQuestions();
+
+  $scope.getInfoCourse = function () {
+    if ($scope.idCourse) {
+      CourseService.get({
+        id_user: idUser,
+        id_course: $scope.idCourse
+      }, function (data) {
+        $scope.infoCourse = data;
+
+      }, function (err) {
+        console.log(err);
+      });
+    }
+
+  }
+
+  $scope.getInfoCourse();
+
+   $scope.getInfoLesson = function () {
+    if ($scope.idLesson) {
+      LeesonService.get({id_lesson: $scope.idLesson}, function (data) {
+        $scope.lesson = data.lesson;
+      }, function (err) {
+        console.log(err);
+      })
+    }
+  }
+
+  $scope.getInfoLesson();
 
   $scope.nextQuestion = function () {
     $scope.disableAllAnswer = false;

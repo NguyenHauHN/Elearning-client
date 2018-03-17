@@ -5,7 +5,7 @@ app.factory('CourseService', ['$resource', function ($resource, Domain) {
   return $resource("https://elearningspm.herokuapp.com/courses",
     {},
     {
-      'query': {method: 'GET', isArray: true},
+      'query': {method: 'GET'},
       'get': {method: 'GET', url: "https://elearningspm.herokuapp.com/course"}
     });
 }]);

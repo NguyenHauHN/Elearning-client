@@ -1,6 +1,6 @@
 <div id="header" class="header-v2" ng-controller="HeaderController">
-  <div class="header-row row">
-    <a class="header-logo" href="/vi/" title="Trang chủ">
+    <div class="header-row row">
+        <a class="header-logo" href="/vi/" title="Trang chủ">
 
                 <span class="header-logo-wrapper">
                     <div class="header-logo-desktop">
@@ -14,23 +14,23 @@
                     </span>
                 </span>
 
-    </a>
-
-
-    <ul class="header-nav ">
-
-      <li class="header-nav-item plain " ng-class="{'is-active': currState == 'home'}">
-        <a ui-sref="home" class="nav-item-btn">
-          <span class="nav-item-btn-text">Trang chủ</span>
         </a>
-      </li>
 
-      <li class="header-nav-item plain" ng-class="{'is-active': currState == 'courses'}">
-        <a ui-sref="courses" class="nav-item-btn">
-          <span class="nav-item-btn-text">Khóa học</span>
-        </a>
-      </li>
-      <li class="header-profile-wrapper" ng-click="isActiveProfile =!isActiveProfile ">
+        <ul class="header-nav ">
+
+            <li class="header-nav-item plain " ng-class="{'is-active': currState == 'home'}">
+                <a ui-sref="home" class="nav-item-btn">
+                    <span class="nav-item-btn-text">Trang chủ</span>
+                </a>
+            </li>
+
+            <li class="header-nav-item plain"
+                ng-class="{'is-active': currState == 'courses' ||  currState == 'detailCourses'||  currState == 'lesson'}">
+                <a ui-sref="courses" class="nav-item-btn">
+                    <span class="nav-item-btn-text">Khóa học</span>
+                </a>
+            </li>
+            <li class="header-profile-wrapper" ng-click="isActiveProfile =!isActiveProfile ">
                     <span class="header-info-card js-info-toggle sel-info-toggle">
                         <span class="info-card-inner" accesskey="h">
                             <span class="info-card-picture">
@@ -40,44 +40,45 @@
                             </span>
                         </span>
                     </span>
-        <span class="header-dropdown-arrow js-info-toggle"></span>
+                <span class="header-dropdown-arrow js-info-toggle"></span>
 
-        <div class="header-profile-inner" ng-class="{'is-active': isActiveProfile}">
-          <div class="profile-row profile-details">
-            <div class="profile-col rank-badge">
-              <img src="https://d2rhekw5qr4gcj.cloudfront.net/img/icons/ranks/ziggy_5.svg" alt="">
-            </div>
-            <div class="profile-col rank-text">
-              <div class="profile-row">
-                <div class="profile-col rank-text">
-                  <h2>{{nameUser}}</h2>
+                <div class="header-profile-inner" ng-class="{'is-active': isActiveProfile}">
+                    <div class="profile-row profile-details">
+                        <div class="profile-col rank-badge">
+                            <img src="https://d2rhekw5qr4gcj.cloudfront.net/img/icons/ranks/ziggy_5.svg" alt="">
+                        </div>
+                        <div class="profile-col rank-text">
+                            <div class="profile-row">
+                                <div class="profile-col rank-text">
+                                    <h2>{{nameUser}}</h2>
 
+                                </div>
+                            </div>
+                            <div class="profile-row profile-progress">
+                                <span class="profile-progress-bar js-progress-bar" data-progress="0"
+                                      style="width: 0%;"></span>
+                            </div>
+                            <div class="profile-row">
+                                <div class="profile-col rank-text">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-row profile-links">
+                        <a ui-sref="profile" class="profile-link">
+                            <i class="profile-link-icon link-icon-1"></i>
+                            <span class="profile-link-text">Hồ sơ</span>
+                        </a>
+                        <a class="profile-link js-logout sel-logout" ng-click="logout()">
+                            <i class="profile-link-icon link-icon-3"></i>
+                            <span class="profile-link-text">Đăng xuất</span>
+                        </a>
+                    </div>
                 </div>
-              </div>
-              <div class="profile-row profile-progress">
-                <span class="profile-progress-bar js-progress-bar" data-progress="0" style="width: 0%;"></span>
-              </div>
-              <div class="profile-row">
-                <div class="profile-col rank-text">
 
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="profile-row profile-links">
-            <a ui-sref="profile" class="profile-link">
-              <i class="profile-link-icon link-icon-1"></i>
-              <span class="profile-link-text">Hồ sơ</span>
-            </a>
-            <a class="profile-link js-logout sel-logout" ng-click="logout()">
-              <i class="profile-link-icon link-icon-3"></i>
-              <span class="profile-link-text">Đăng xuất</span>
-            </a>
-          </div>
-        </div>
+            </li>
 
-      </li>
-
-    </ul>
-  </div>
+        </ul>
+    </div>
 </div>
