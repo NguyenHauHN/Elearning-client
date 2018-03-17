@@ -3,7 +3,7 @@
  */
 app.controller('CoursesController', function ($scope, CourseService) {
   $scope.getAllCourse = function () {
-    CourseService.get({}, function (data) {
+    CourseService.query({}, function (data) {
       $scope.courses = data;
     }, function (err) {
       console.log(err);

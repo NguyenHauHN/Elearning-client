@@ -29,7 +29,6 @@ app.controller('LearnLessonController', function ($scope, $state, QuestionsServi
     if ($scope.learnLessonData && $scope.learnLessonData.total_question && $scope.learnLessonData.total_question > 1) {
       $scope.indexActiveQuestion = $scope.indexActiveQuestion + 1;
     }
-    console.log($scope.indexActiveQuestion);
   }
 
   $scope.checkAnswerType4 = function (index, userAnswer) {
@@ -46,14 +45,14 @@ app.controller('LearnLessonController', function ($scope, $state, QuestionsServi
           $scope.rightAnswer[index] = false;
         }
 
-        if ($scope.rightAnswer[index] && idx == $scope.learnLessonData.total_question - 1) {
+        if (index == $scope.learnLessonData.total_question - 1) {
           $timeout(function () {
             alert("Bạn đã hoàn thành bài hoc với " + $scope.totalMark + " điểm:" +
               "\n" + $scope.numRightAnswer +
               " câu đúng và " + ($scope.learnLessonData.total_question - $scope.numRightAnswer) + " câu sai." +
               "\n Hãy cố gắng hơn nữa nhé!");
-          }, 2500);
-          $scope.savePathway
+          }, 2000);
+          $scope.savePathway();
         }
 
       }
@@ -111,13 +110,13 @@ app.controller('LearnLessonController', function ($scope, $state, QuestionsServi
       $scope.rightAnswer[index] = false;
     }
 
-    if ($scope.rightAnswer[index] && idx == $scope.learnLessonData.total_question - 1) {
+    if ( idx == $scope.learnLessonData.total_question - 1) {
       $timeout(function () {
         alert("Bạn đã hoàn thành bài hoc với " + $scope.totalMark + " điểm:" +
           "\n" + $scope.numRightAnswer +
           " câu đúng và " + ($scope.learnLessonData.total_question - $scope.numRightAnswer) + " câu sai." +
           "\n Hãy cố gắng hơn nữa nhé!");
-      }, 2500);
+      }, 2000);
 
       $scope.savePathway();
     }

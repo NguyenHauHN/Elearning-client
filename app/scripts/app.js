@@ -37,7 +37,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $resourceProvider) {
     })
     .state({
       name: "detailCourses",
-      url: "/courses/{id}",
+      url: "/courses/{id_course}",
       templateUrl: "views/detail-course.html",
       controller: "DetailCourseController"
     })
