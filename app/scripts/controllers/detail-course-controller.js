@@ -11,7 +11,6 @@ app.controller('DetailCourseController', function ($scope, CourseService, $state
         id_user: idUser,
         id_course: $scope.idCourse
       }, function (data) {
-        console.log(data);
         $scope.infoCourse = data;
       }, function (err) {
         console.log(err);
@@ -27,5 +26,29 @@ app.controller('DetailCourseController', function ($scope, CourseService, $state
       text = text.substring(0, 120) + "..."
     }
     return text;
+  }
+
+  $scope.enrollCoourse = function () {
+    CourseService.enroll({
+      id_user: idUser,
+      id_course: $scope.idCourse
+    }, function (data) {
+      console.log(data);
+      $scope.getInfoCourse();
+    }, function (err) {
+      console.log(err);
+    });
+  }
+
+  $scope.quitCourse = function () {
+    CourseService.quit({
+      id_user: idUser,
+      id_course: $scope.idCourse
+    }, function (data) {
+      console.log(data);
+      $scope.getInfoCourse();
+    }, function (err) {
+      console.log(err);
+    })
   }
 });

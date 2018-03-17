@@ -4,6 +4,7 @@
 app.controller('CoursesController', function ($scope, CourseService) {
   $scope.currentPage = 1;
   $scope.getAllCourse = function () {
+    $scope.currentPage = 1;
     CourseService.query({
       page: $scope.currentPage
     }, function (data) {
@@ -18,6 +19,24 @@ app.controller('CoursesController', function ($scope, CourseService) {
 
   $scope.loadMore = function () {
     $scope.currentPage += 1;
-    $scope.getAllCourse();
+    if ($scope.keyword) {
+      $scope.searchCourse
+    }
+    else {
+      $scope.getAllCourse();
+    }
+
+  }
+
+  $scope.searchCourse = function () {
+    $scope.currentPage = 1;
+    CourseService.search({
+      name: $scope.keyword,
+      page: $scope.currentPage
+    }, function (data) {
+      $scope.courses = data.data;
+    }, function (err) {
+      console.log(err);
+    })
   }
 });

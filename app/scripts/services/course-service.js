@@ -6,6 +6,9 @@ app.factory('CourseService', ['$resource', function ($resource, Domain) {
     {},
     {
       'query': {method: 'GET'},
-      'get': {method: 'GET', url: "https://elearningspm.herokuapp.com/course"}
+      'get': {method: 'GET', url: "https://elearningspm.herokuapp.com/course"},
+      'enroll': {method: 'PUT', url: "https://elearningspm.herokuapp.com/enroll"},
+      'quit': {method: 'PUT', url: "https://elearningspm.herokuapp.com/quit_course"},
+      'search': {method: 'GET', url: "https://elearningspm.herokuapp.com/search_course"}
     });
 }]);
