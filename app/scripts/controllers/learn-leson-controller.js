@@ -5,7 +5,7 @@ app.controller('LearnLessonController', function ($scope, $state, QuestionsServi
   $scope.indexActiveQuestion = 0;
   $scope.idLesson = $state.params.id_lesson;
   $scope.idCourse = $state.params.id_course;
-  var markEachQuestion = 0;
+  var markEachQuestion = 5;
   $scope.totalMark = 0;
   $scope.rightAnswer = {};
   $scope.disableAllAnswer = false;
@@ -15,9 +15,9 @@ app.controller('LearnLessonController', function ($scope, $state, QuestionsServi
   $scope.getQuestions = function () {
     QuestionsService.query({id_lesson: $scope.idLesson}, function (data) {
       $scope.learnLessonData = data;
-      if ($scope.learnLessonData.total_question && $scope.learnLessonData.total_question > 0) {
-        markEachQuestion = Math.round(100 / $scope.learnLessonData.total_question);
-      }
+      // if ($scope.learnLessonData.total_question && $scope.learnLessonData.total_question > 0) {
+      //   markEachQuestion = Math.round(100 / $scope.learnLessonData.total_question);
+      // }
     }, function (err) {
       console.log(err);
     });

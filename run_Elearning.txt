@@ -1,0 +1,16 @@
+1. Mở project bằng IDE như Visual studio code hay Pycharm, Wenstorm
+2. Mở terminal, mở đường dẫn thư mục project và chạy các lênh sau:
+	npm install
+	npm install -g grunt-cli bower yo generator-karma generator-angular
+3. Cài đăt Ruby: https://rubyinstaller.org/downloads/
+4. Thực hiện install compass để sử dụng Sass: gem install compass
+5. Trong terminal, mở đường dẫn thư mục project, chạy lệnh: bower install --save
+6. Quá trình cài đặt các package hoàn thành, chúng ta sử dụng lệnh: 
+	grunt serve: chạy project
+	grunt build: build project (không xem trước)
+	grunt serve:dist -- build project và xem trước
+
+
+=======================================================
+LINK WEBSITE ELEARNING trên firebase: https://elearning-83945.firebaseapp.com
+
