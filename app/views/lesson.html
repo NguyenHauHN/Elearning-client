@@ -4,10 +4,10 @@
     <div id="page-head" class="">
         <div class="inner">
 
-            <div class="course-wrapper" itemscope="" itemtype="http://schema.org/Course">
+            <div class="course-wrapper">
                 <div class="course-header course-header-slim clearfix">
 
-                    <a href="/course/1658818/tieng-han-1/" class="course-photo">
+                    <a ui-sref="detailCourses({id_course: infoCourse.idcourse})" class="course-photo">
                         <img
                               src="https://d2rhekw5qr4gcj.cloudfront.net/img/100sqf/from/uploads/course_photos/27320785000170927162107.png">
                     </a>
@@ -91,8 +91,9 @@
                         </h3>
 
 
-                        <div class="progress">
-
+                        <div class="progress" title="" data-placement="bottom" data-original-title="1%">
+                            <div class="bar-success bar-abs bar"
+                                 ng-style="{'width': '1%'}"></div>
                         </div>
                     </div>
 
