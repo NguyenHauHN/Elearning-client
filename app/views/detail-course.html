@@ -52,7 +52,7 @@
             <a class="tab">
               <i class="ico ico-list"></i>
 
-              Thời gian ({{infoCourse.totalTime}}h)
+              Thời gian ({{infoCourse.number}}h)
 
             </a>
           </li>
@@ -77,10 +77,12 @@
             <div class="infos">
               <div class="progress-box-title">
 
-                Đã học 0 / 209 từ (0 trong trí nhớ dài hạn)
+                Đã học {{numLearnedLesson}} / {{infoCourse.lessons.length}} bài học
               </div>
 
-              <div class="progress"></div>
+              <div class="progress" title="" data-placement="bottom" data-original-title="1%">
+                <div class="bar-success bar-abs bar" ng-style="{'width': getPercentComplete(numLearnedLesson, infoCourse.lessons.length) + '%'}"></div>
+            </div>
 
             </div>
             <div class="actions actions-left">

@@ -81,6 +81,8 @@ app.controller('LearnLessonController', function ($scope, $state, QuestionsServi
               "\n" + $scope.numRightAnswer +
               " câu đúng và " + ($scope.learnLessonData.total_question - $scope.numRightAnswer) + " câu sai." +
               "\n Hãy cố gắng hơn nữa nhé!");
+
+            $scope.completeLesson = true;
           }, 2000);
           $scope.savePathway();
         }
@@ -146,6 +148,7 @@ app.controller('LearnLessonController', function ($scope, $state, QuestionsServi
           "\n" + $scope.numRightAnswer +
           " câu đúng và " + ($scope.learnLessonData.total_question - $scope.numRightAnswer) + " câu sai." +
           "\n Hãy cố gắng hơn nữa nhé!");
+        $scope.completeLesson = true;
       }, 2000);
 
       $scope.savePathway();

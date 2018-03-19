@@ -53,7 +53,7 @@
               <div class="course-box-wrapper col-xs-12 col-sm-6 col-md-3" ng-repeat="course in courses track by $index">
                 <div class="course-box ">
                   <div class="inner-wrap">
-                    <a href="/course/1658724/tieng-anh-anh-quoc-1/" class="picture-wrapper">
+                    <a ui-sref="detailCourses({id_course: course.idcourse})" class="picture-wrapper">
                       <div class="course-box-picture"
                            style="background-image: url({{course.image}})">
                       </div>

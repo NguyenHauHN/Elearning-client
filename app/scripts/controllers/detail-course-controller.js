@@ -12,6 +12,13 @@ app.controller('DetailCourseController', function ($scope, CourseService, $state
         id_course: $scope.idCourse
       }, function (data) {
         $scope.infoCourse = data;
+        $scope.numLearnedLesson = 0;
+        _.map($scope.infoCourse.lessons, function (item) {
+          if (item.islearned == 1) {
+            $scope.numLearnedLesson += 1;
+          }
+        })
+
       }, function (err) {
         console.log(err);
       });
@@ -46,9 +53,14 @@ app.controller('DetailCourseController', function ($scope, CourseService, $state
       id_course: $scope.idCourse
     }, function (data) {
       console.log(data);
+      alert('Thoát khóa học thành công!');
       $scope.getInfoCourse();
     }, function (err) {
       console.log(err);
     })
+  }
+
+  $scope.getPercentComplete = function (number, total) {
+    return ((number / total) * 100).toFixed(2);
   }
 });
